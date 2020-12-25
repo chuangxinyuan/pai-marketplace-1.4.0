@@ -14,7 +14,7 @@ const DataTemplateDetail = props => {
 
   return (
     <Stack gap='m'>
-      <Text variant='large'>Data Storage</Text>
+      <Text variant='large'>数据存储</Text>
       <StorageCard storages={dataStorages} />
     </Stack>
   );

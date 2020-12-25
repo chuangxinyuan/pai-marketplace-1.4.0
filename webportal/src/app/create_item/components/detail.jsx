@@ -118,7 +118,7 @@ const Detail = props => {
     <DetailsArea>
       <Stack {...columnProps}>
         <TextField
-          label='Docker Image'
+          label='Docker镜像'
           value={
             dockerImage ? dockerImage.uri : 'There is no docker image setting'
           }
@@ -126,7 +126,7 @@ const Detail = props => {
           styles={textStyles}
         />
         <TextField
-          label='Ports'
+          label='端口'
           readOnly={true}
           value={
             isEmpty(ports) ? 'There is no ports setting' : JSON.stringify(ports)
@@ -134,48 +134,48 @@ const Detail = props => {
           styles={textStyles}
         />
         <Pivot linkSize={PivotLinkSize.normal} styles={pivotStyles}>
-          <PivotItem headerText='Data Storage'>
+          <PivotItem headerText='数据存储'>
             <Stack {...columnProps}>
               <TextField
-                label='Storage Name'
+                label='存储名称'
                 value={dataStorage ? dataStorage.name : 'N/A'}
                 readOnly={true}
                 styles={textStyles}
               />
               <TextField
-                label='Storage Path'
+                label='存储路径'
                 value={dataStorage ? dataStorage.uri : 'N/A'}
                 readOnly={true}
                 styles={textStyles}
               />
             </Stack>
           </PivotItem>
-          <PivotItem headerText='Code Storage'>
+          <PivotItem headerText='代码存储'>
             <Stack {...columnProps}>
               <TextField
-                label='Storage Name'
+                label='存储名称'
                 value={codeStorage ? codeStorage.name : 'N/A'}
                 readOnly={true}
                 styles={textStyles}
               />
               <TextField
-                label='Storage Path'
+                label='存储路径'
                 value={codeStorage ? codeStorage.uri : 'N/A'}
                 readOnly={true}
                 styles={textStyles}
               />
             </Stack>
           </PivotItem>
-          <PivotItem headerText='Output Storage'>
+          <PivotItem headerText='输出存储'>
             <Stack {...columnProps}>
               <TextField
-                label='Storage Name'
+                label='存储名称'
                 value={outputStorage ? outputStorage.name : 'N/A'}
                 readOnly={true}
                 styles={textStyles}
               />
               <TextField
-                label='Storage Path'
+                label='存储路径'
                 value={outputStorage ? outputStorage.uri : 'N/A'}
                 readOnly={true}
                 styles={textStyles}
@@ -184,7 +184,7 @@ const Detail = props => {
           </PivotItem>
         </Pivot>
         <TextField
-          label='Commands'
+          label='命令行'
           readOnly={true}
           multiline={true}
           rows={8}
@@ -203,10 +203,10 @@ const Detail = props => {
         }}
       >
         <DefaultButton
-          text='Back'
+          text='返回'
           onClick={() => setStep('basicInformation')}
         />
-        <PrimaryButton text='Next' onClick={submit} />
+        <PrimaryButton text='下一步' onClick={submit} />
       </Stack>
     </DetailsArea>
   );

@@ -24,7 +24,7 @@ export async function getConnectionString(
   if (res.ok) {
     const blobs = await res.json();
     if (isEmpty(blobs)) {
-      throw new Error('Error no available connectionString!');
+      throw new Error('没有可用的连接串!');
     }
     return blobs[0].connectionStrings[0];
   } else if (res.status === 404) {
@@ -66,10 +66,10 @@ export async function getItem(itemId) {
     return newItem;
   } catch (error) {
     if (error.name === 'YAMLException') {
-      alert(`wrong yaml file format of ${url}`);
+      alert(`错误的yaml文件格式 ${url}`);
       window.location.href = `http://localhost:9286/plugin.html?index=0`;
     } else {
-      alert(`could not get marketplace item from uri ${url}`);
+      alert(`无法从uri获取资源市场项 ${url}`);
       window.location.href = `http://localhost:9286/plugin.html?index=0`;
     }
   }

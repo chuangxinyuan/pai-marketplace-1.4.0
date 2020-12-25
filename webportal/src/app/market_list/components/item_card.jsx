@@ -25,8 +25,8 @@ const ItemCard = props => {
       Math.abs(new Date() - new Date(item.createdAt)) / 1000 / 3600 / 24,
     );
     return createdTime === 0
-      ? 'not long ago'
-      : createdTime + (createdTime > 1 ? ' days ago' : ' day ago');
+      ? '刚刚'
+      : createdTime + (createdTime > 1 ? ' 天前' : ' 天前');
   };
 
   return (
@@ -57,7 +57,7 @@ const ItemCard = props => {
             {item.name}
           </Link>
           <Text variant={'small'}>
-            {item.author} published {populateCreatedTime()}
+            {item.author} 发布于 {populateCreatedTime()}
           </Text>
           <Text>{item.summary}</Text>
         </Stack>

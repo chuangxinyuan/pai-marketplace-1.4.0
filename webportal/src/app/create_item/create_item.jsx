@@ -16,7 +16,7 @@ import BasicInformation from './components/basic_information';
 import Detail from './components/detail';
 
 const defaultDescription =
-  '# Job Template Name\n\n## Training data\n\nPlease add the brief introduction of the training data\n\n## How to use\n\n### Prerequisites\n\nPlease add the prerequisites before run the job if have. The prerequisites include data downloading, package installation, environment variable settings, and so on.\n\n### Training command\n\nPlease add the training command here.\n\n### Get the result\n\nPlease show how to get the training result.\n\n## Reference\n\nYou can add the reference tutorials or projects here if have any.\n';
+  '# 任务模板名称\n\n## 训练集\n\n请简短的介绍训练数据\n\n## 如何使用\n\n### 先决条件\n\n在使用任务前请添加先决条件. 先决条件包括数据下载、包安装、环境变量设置等.\n\n### 命令行\n\n请在此处添加训练命令.\n\n### 得到结果\n\n请演示如何获得训练结果.\n\n## 参考文献\n\n如果有参考教程或项目，可以在这里添加.\n';
 
 const { spacing, palette } = getTheme();
 
@@ -78,14 +78,14 @@ const CreateItem = props => {
         <ActionButton
           iconProps={{ iconName: 'revToggleKey' }}
           onClick={() => {
-            if (confirm('Are you sure you want to leave this page?')) {
+            if (confirm('确定要离开此页吗?')) {
               routeProps.history.push('/');
             } else {
               // Do nothing!
             }
           }}
         >
-          Back to market list
+          返回资源市场列表
         </ActionButton>
       </Stack>
       <Stack>

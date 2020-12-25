@@ -12,7 +12,7 @@ const OldTemplateDetail = props => {
 
   return (
     <Stack gap='m'>
-      <Text variant='large'>Protocol</Text>
+      <Text variant='large'>协议</Text>
       <CodeWrapper>{yaml.safeDump(marketItem.protocol)}</CodeWrapper>
     </Stack>
   );

@@ -13,20 +13,20 @@ const StorageCard = props => {
   return (
     <CodeWrapper>
       {isEmpty(storages) ? (
-        <Text>There is no storage setting</Text>
+        <Text>没有存储设置</Text>
       ) : (
         storages.map(storage => (
           <Stack key={storage.name} gap='m'>
             <Stack horizontal verticalAlign='center' gap='m'>
-              <Text>Storage Type:</Text>
+              <Text>存储类型:</Text>
               <Text>{storage.type}</Text>
             </Stack>
             <Stack horizontal verticalAlign='center' gap='m'>
-              <Text>Storage Name:</Text>
+              <Text>存储名称:</Text>
               <Text>{storage.name}</Text>
             </Stack>
             <Stack horizontal verticalAlign='center' gap='m'>
-              <Text>Storage Path:</Text>
+              <Text>存储路径:</Text>
               <Text>{storage.uri}</Text>
             </Stack>
           </Stack>

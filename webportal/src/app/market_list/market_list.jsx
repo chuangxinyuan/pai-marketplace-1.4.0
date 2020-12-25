@@ -35,7 +35,7 @@ const MarketList = props => {
         <Stack horizontal horizontalAlign='end'>
           <DefaultButton
             iconProps={{ iconName: 'Add' }}
-            text='Create'
+            text='新建'
             href={`${window.location.href.split('?type=')[0]}create_item`}
             styles={{
               root: {

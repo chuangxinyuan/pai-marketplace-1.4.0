@@ -30,7 +30,7 @@ const PivotCard = props => {
   return (
     <Wrapper>
       <Pivot>
-        <PivotItem headerText='Description'>
+        <PivotItem headerText='概述'>
           <PivotItemWrapper>
             <ReactMarkdown
               className='markdown-body'
@@ -38,7 +38,7 @@ const PivotCard = props => {
             />
           </PivotItemWrapper>
         </PivotItem>
-        <PivotItem headerText='Detail'>
+        <PivotItem headerText='详情'>
           <PivotItemWrapper>
             {marketItem.type === TYPE_ENUM.DATA_TEMPLATE && (
               <DataTemplateDetail marketItem={marketItem} />

@@ -52,14 +52,14 @@ const JobTemplateDetail = props => {
 
   return (
     <Stack gap='m'>
-      <Text variant='xLarge'>Docker Image:</Text>
+      <Text variant='xLarge'>Docker镜像:</Text>
       <CodeWrapper>
         <Text variant='large'>{dockerImage.uri}</Text>
       </CodeWrapper>
-      <Text variant='xLarge'>Ports:</Text>
+      <Text variant='xLarge'>端口:</Text>
       <CodeWrapper>
         {isEmpty(ports) ? (
-          <Text>There is no ports setting</Text>
+          <Text>还没有设置端口</Text>
         ) : (
           <Stack horizontal gap='s1'>
             {ports.map(port => (
@@ -68,13 +68,13 @@ const JobTemplateDetail = props => {
           </Stack>
         )}
       </CodeWrapper>
-      <Text variant='xLarge'>Data Storage:</Text>
+      <Text variant='xLarge'>数据存储:</Text>
       <StorageCard storages={dataStorages} />
-      <Text variant='xLarge'>Code Storage:</Text>
+      <Text variant='xLarge'>代码存储:</Text>
       <StorageCard storages={codeStorages} />
-      <Text variant='xLarge'>Output Storage:</Text>
+      <Text variant='xLarge'>输出存储:</Text>
       <StorageCard storages={outputStorages} />
-      <Text variant='xLarge'>Commands:</Text>
+      <Text variant='xLarge'>命令行:</Text>
       <CodeWrapper>
         <Stack gap='s2'>
           {commands.map(command => (

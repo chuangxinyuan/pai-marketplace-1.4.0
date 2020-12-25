@@ -44,7 +44,7 @@ const UploadFiles = ({ getRootProps, getInputProps, loadYamlError }) => {
             },
           }}
         >
-          Upload OpenPAI Protocol
+          上传 OpenPAI 协议
         </Text>
         <div style={{ width: '30px' }}>
           <UploadIcon />
@@ -57,7 +57,7 @@ const UploadFiles = ({ getRootProps, getInputProps, loadYamlError }) => {
               },
             }}
           >
-            Drag and drop or click here to upload a YAML file
+            拖放或单击此处上载YAML文件
           </Text>
         </MessageText>
         {loadYamlError !== null && <ErrorText>{loadYamlError}</ErrorText>}

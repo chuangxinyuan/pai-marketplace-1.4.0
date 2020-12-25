@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   height: 100%;
 `;
 
-const Loading = ({ label = 'Loading...' }) => {
+const Loading = ({ label = '加载中...' }) => {
   return (
     <Wrapper>
       <Stack>

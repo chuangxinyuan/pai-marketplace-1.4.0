@@ -16,7 +16,7 @@ const TopBar = React.memo(props => {
             history.push('/');
           }}
         >
-          Back to market list
+          返回资源列表
         </ActionButton>
       </Stack>
     </Stack>

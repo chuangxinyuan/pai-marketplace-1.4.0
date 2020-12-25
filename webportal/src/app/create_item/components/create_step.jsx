@@ -54,7 +54,7 @@ const CreateStep = props => {
             }
           />
           <StepText color={props.step === 'uploadFiles' ? 'black' : 'gray'}>
-            <Text>Upload Files</Text>
+            <Text>上传</Text>
           </StepText>
         </StepArea>
         <StepArea left='calc(50% - 8px)'>
@@ -68,7 +68,7 @@ const CreateStep = props => {
           <StepText
             color={props.step === 'basicInformation' ? 'black' : 'gray'}
           >
-            <Text>Basic information</Text>
+            <Text>基本信息</Text>
           </StepText>
         </StepArea>
         <StepArea left='calc(100% - 8px)'>
@@ -76,7 +76,7 @@ const CreateStep = props => {
             color={props.step === 'detail' ? palette.themePrimary : 'LightGray'}
           />
           <StepText color={props.step === 'detail' ? 'black' : 'gray'}>
-            <Text>Detail</Text>
+            <Text>详情</Text>
           </StepText>
         </StepArea>
       </GrayLine>

@@ -67,7 +67,7 @@ const BasicInformation = props => {
     <BasicInformationArea>
       <Stack {...columnProps}>
         <TextField
-          label='Title'
+          label='标题'
           required
           value={itemObject.name}
           onChange={(event, newValue) => {
@@ -77,22 +77,22 @@ const BasicInformation = props => {
           }}
           errorMessage={
             errorMessage && isEmpty(itemObject.name)
-              ? 'Please enter name here.'
+              ? '请输入名称.'
               : undefined
           }
           styles={textStyles}
         />
         <TextField
-          label='Auther'
+          label='作者'
           readOnly={true}
           value={user}
           styles={textStyles}
         />
         <Dropdown
-          label='Type'
+          label='类型'
           required={true}
-          placeholder='Please select a type'
-          options={[{ key: TYPE_ENUM.JOB_TEMPLATE, text: 'Job template' }]}
+          placeholder='请选择类型'
+          options={[{ key: TYPE_ENUM.JOB_TEMPLATE, text: '任务模板' }]}
           onChange={(event, item) => {
             itemObject.type = item.key;
             setItemObject(itemObject);
@@ -102,12 +102,12 @@ const BasicInformation = props => {
           styles={dropdownStyles}
           errorMessage={
             errorMessage && isEmpty(itemObject.type)
-              ? 'Please select type here.'
+              ? '请选择类型.'
               : undefined
           }
         />
         <TextField
-          label='Short summary'
+          label='概述'
           required
           value={itemObject.summary}
           onChange={(event, newValue) => {
@@ -117,13 +117,13 @@ const BasicInformation = props => {
           }}
           errorMessage={
             errorMessage && isEmpty(itemObject.summary)
-              ? 'Please enter summary here.'
+              ? '请输入概述.'
               : undefined
           }
           styles={textStyles}
         />
         <TextField
-          label='Description'
+          label='描述'
           required
           multiline={true}
           rows={9}
@@ -135,7 +135,7 @@ const BasicInformation = props => {
           }}
           errorMessage={
             errorMessage && isEmpty(itemObject.description)
-              ? 'Please enter description here.'
+              ? '请输入描述.'
               : undefined
           }
           styles={textStyles}
@@ -152,14 +152,14 @@ const BasicInformation = props => {
         }}
       >
         <DefaultButton
-          text='Back'
+          text='返回'
           onClick={() => {
             setErrorMessage(false);
             setStep('uploadFiles');
           }}
         />
         <PrimaryButton
-          text='Next'
+          text='下一步'
           onClick={() => {
             if (
               isEmpty(itemObject.name) ||
@@ -168,7 +168,7 @@ const BasicInformation = props => {
               isEmpty(itemObject.description)
             ) {
               setErrorMessage(true);
-              alert('please enter all required fields.');
+              alert('请输入所有必填字段.');
             } else {
               setErrorMessage(false);
               setStep('detail');

@@ -70,7 +70,7 @@ export default function Summary(props) {
               }}
               delay={0}
               tooltipProps={{
-                onRenderContent: () => <Text>Author</Text>,
+                onRenderContent: () => <Text>作者</Text>,
               }}
             >
               <Stack horizontal gap='s1'>
@@ -85,7 +85,7 @@ export default function Summary(props) {
               }}
               delay={0}
               tooltipProps={{
-                onRenderContent: () => <Text>Create Time</Text>,
+                onRenderContent: () => <Text>创建时间</Text>,
               }}
             >
               <Stack horizontal gap='s1'>
@@ -102,7 +102,7 @@ export default function Summary(props) {
               }}
               delay={0}
               tooltipProps={{
-                onRenderContent: () => <Text>Type</Text>,
+                onRenderContent: () => <Text>类型</Text>,
               }}
             >
               <Stack horizontal gap='s1'>
