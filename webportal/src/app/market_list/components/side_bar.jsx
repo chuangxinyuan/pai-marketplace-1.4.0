@@ -30,7 +30,7 @@ const SideBar = props => {
       <Text variant={'large'}>类型</Text>
       <Stack>
         <FilterItem
-          text='所以'
+          text='所有'
           selected={type === TYPE_ENUM.ALL}
           onChange={changeFilter(TYPE_ENUM.ALL)}
         />

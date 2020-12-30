@@ -16,15 +16,14 @@ ENV NODE_ENV=production \
     MARKETPLACE_API_URL=${API_URL} \
     NPM_INSTALL_TOKEN=${NPM_INSTALL_TOKEN}
 
-RUN git clone https://github.com/microsoft/openpaimarketplace.git && \
-    cd openpaimarketplace && \
-    git checkout ${VERSION} && \
+RUN git clone https://github.com/chuangxinyuan/pai-marketplace-1.4.1.git && \
+    cd pai-marketplace-1.4.1 && \
     cd webportal && \
     npm install --production=false && \
     npm run build
 
 EXPOSE ${SERVER_PORT}
 
-WORKDIR /usr/src/app/openpaimarketplace/webportal
+WORKDIR /usr/src/app/pai-marketplace-1.4.1/webportal
 
 CMD ["npm", "start"]

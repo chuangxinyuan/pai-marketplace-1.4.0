@@ -114,7 +114,7 @@ export default function Summary(props) {
             {marketItem.type === TYPE_ENUM.DATA_TEMPLATE &&
               marketItem.dataType === 'blob' && (
                 <DefaultButton
-                  text='Download'
+                  text='下載'
                   onClick={async () => {
                     const fileName = getFileName(marketItem.dataUrl);
                     const res = await fetch(marketItem.dataUrl);
@@ -126,7 +126,7 @@ export default function Summary(props) {
             {marketItem.type === TYPE_ENUM.DATA_TEMPLATE &&
               marketItem.dataType === 'github' && (
                 <DefaultButton
-                  text='Download'
+                  text='下載'
                   onClick={async () => {
                     const fileName = getFileName(marketItem.dataUrl);
                     const res = await fetch(marketItem.dataUrl, {
@@ -138,7 +138,7 @@ export default function Summary(props) {
                 />
               )}
             <PrimaryButton
-              text='Use'
+              text='使用'
               onClick={async () => {
                 await clickUse();
               }}
